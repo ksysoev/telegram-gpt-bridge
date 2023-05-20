@@ -9,7 +9,7 @@ WORKDIR $GOPATH/src/gptbot/
 COPY . .
 # Fetch dependencies.
 # Using go get.
-#RUN go get -d -v
+RUN go get
 # Build the binary.
 RUN go build -o /go/bin/gptbot main.go
 ############################

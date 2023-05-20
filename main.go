@@ -11,6 +11,8 @@ import (
 )
 
 func main() {
+	log.Println("Starting Telegram GPT-3 bridge...")
+
 	// Initialize the Telegram bot API client
 	bot, err := tgbotapi.NewBotAPI(os.Getenv("TELEGRAM_BOT_TOKEN"))
 	if err != nil {
@@ -31,6 +33,7 @@ func main() {
 
 	updates := bot.GetUpdatesChan(updateConfig)
 
+	log.Println("Telegram GPT-3 bridge is ready! awaiting messages...")
 	for update := range updates {
 		if update.Message == nil {
 			continue
