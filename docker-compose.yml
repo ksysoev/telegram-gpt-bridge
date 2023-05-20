@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  gptbot:
+    build: .
+    environment:
+      - TELEGRAM_BOT_TOKEN=HERE_YOUR_TELEGRAM_BOT_TOKEN
+      - OPENAI_TOKEN=HERE_YOUR_OPENAI_TOKEN
+      - WHITE_LISTED_USERS=HERE_COMMAN_SEPARATED_LIST_OF_WHITE_LISTED_USERS
