@@ -1,5 +1,18 @@
 package main
 
+// Package main is a Telegram bot that uses the OpenAI GPT-3 API to generate text.
+//
+// Usage:
+// 1. Create a Telegram bot and obtain a bot token.
+// 2. Set the TELEGRAM_BOT_TOKEN environment variable to the bot token.
+// 3. Create an OpenAI API key and obtain an API token.
+// 4. Set the OPENAI_TOKEN environment variable to the API token.
+// 5. Start the bot by running "go run main.go".
+//
+// Environment variables:
+// - TELEGRAM_BOT_TOKEN: The Telegram bot token.
+// - OPENAI_TOKEN: The OpenAI API token.
+
 import (
 	"context"
 	"log"

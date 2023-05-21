@@ -18,5 +18,6 @@ RUN go build -o /go/bin/gptbot main.go
 FROM scratch
 # Copy our static executable.
 COPY --from=builder /go/bin/gptbot /go/bin/gptbot
+COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 # Run the hello binary.
 ENTRYPOINT ["/go/bin/gptbot"]
